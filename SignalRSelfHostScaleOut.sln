@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "SignalRSelfHostScaleOut", "SignalRSelfHostScaleOut\SignalRSelfHostScaleOut.sfproj", "{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRHost", "SignalRHost\SignalRHost.csproj", "{CBAD1A20-66F5-4806-9833-255317AF09E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Debug|x64.ActiveCfg = Debug|x64
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Debug|x64.Build.0 = Debug|x64
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Debug|x64.Deploy.0 = Debug|x64
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Release|x64.ActiveCfg = Release|x64
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Release|x64.Build.0 = Release|x64
+		{0B9E0EC4-79AC-478F-8A39-03F8E9445D9B}.Release|x64.Deploy.0 = Release|x64
+		{CBAD1A20-66F5-4806-9833-255317AF09E3}.Debug|x64.ActiveCfg = Debug|x64
+		{CBAD1A20-66F5-4806-9833-255317AF09E3}.Debug|x64.Build.0 = Debug|x64
+		{CBAD1A20-66F5-4806-9833-255317AF09E3}.Release|x64.ActiveCfg = Release|x64
+		{CBAD1A20-66F5-4806-9833-255317AF09E3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

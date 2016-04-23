@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="webapp">
+<head>
+    <meta charset="utf-8" />
+    <title>Service Fabric Poc</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.0.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.2.0.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+</head>
+<body>
+
+    <div id="wrapper" ng-controller="DefaultCtrl as ctrl">
+
+        <ul>
+            <li ng-repeat="message in ctrl.messages track by $index">{{ message }}</li>
+        </ul>
+
+    </div>
+
+    <script type="text/javascript">
+
+    var webapp = angular.module("webapp", []);
+
+    webapp.controller("DefaultCtrl", function ($scope) {
+        var self = this;
+
+        self.helloHub = null;
+        self.messages = [];
+
+        function connect() {
+            console.log("Connecting");
+
+            self.helloHub = $.connection.helloHub;
+
+            self.helloHub.client.notifyNewMessage = function (data) {
+                console.log(JSON.stringify(data));
+                $scope.$apply(function () {
+                    self.messages.push(data);
+                });
+            };
+
+            $.connection.hub.start().done(function () {
+                console.log("Connected");
+            });
+        };
+
+        connect();
+    });
+
+    </script>
+
+
+</body>
+</html>
